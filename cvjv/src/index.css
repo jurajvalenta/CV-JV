@@ -1,0 +1,173 @@
+body {
+  background-color: rgb(02, 02, 02);
+  color: rgb(192, 192, 192);
+  font-family: "Roboto";
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.layout {
+
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  margin: 15px;
+}
+
+
+.center {
+  flex: 3;
+  margin: 15px;
+  padding: 0px 10px;
+
+}
+
+.right {
+  flex: 1;
+  margin: 15px;
+
+}
+
+
+b {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  margin: 15px 5px;
+  margin-left: 0px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-left: 0;
+  margin-bottom: 15px;
+  padding: 0;
+
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.0em;
+  margin-left: 0;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.title-name {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.0em;
+  margin-left: 0;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 12px;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+  margin-left: 0;
+  padding: 0;
+}
+
+.print {
+  color: black;
+  background-color: white;
+  margin: 5mm;
+}
+
+
+.print b {
+  color: black;
+  background-color: white;
+}
+
+.print h1 {
+  color: black;
+  background-color: white;
+}
+
+.print h2 {
+  color: black;
+  background-color: white;
+  padding: 0;
+}
+
+.print a {
+  color: black;
+  background-color: white;
+
+}
+
+@media print {
+  .btn {
+    display: none;
+  }
+
+  .print .header {
+    flex-direction: column;
+  }
+
+  .print .layout {
+    flex-direction: row;
+  }
+
+  .left {
+    width: 20%;
+  }
+
+  .center {
+    width: 60%;
+  }
+
+  .right {
+    width: 20%;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .layout {
+    flex-direction: column;
+  }
+
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Medium.ttf") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@page {
+  size: auto;
+  margin: 15mm;
+}

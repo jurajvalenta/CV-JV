@@ -1,0 +1,78 @@
+.contact {
+    /* display: flex;
+    align-items: center; */
+    font-size: 0.85rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+}
+
+.contact-center {
+    width: 100%;
+    color: rgb(192, 192, 192);
+    display: flex;
+    flex-direction: row;
+    /* width: 60%; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.contact-block a {
+    color: rgb(192, 192, 192);
+    margin: 0 5px;
+    
+}
+
+.contact-block p {
+    color: rgb(192, 192, 192);
+/*     font-size: 0.95em; */
+}
+
+.certificate-title {
+
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #959595;
+
+}
+
+.photo {
+    border-radius: 50%;
+    border-color: rgb(192, 192, 192);
+    border-style: outset;
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+
+}
+
+@media (max-width: 450px) {
+    .photo {
+        width: 25vw;
+    }
+
+    .contact-block a {
+        font-size: 0.65rem;
+    }
+
+    .contact-block p {
+        font-size: 0.65rem;
+    }
+}
+
+@media (min-width: 450px) {
+    .photo {
+        width: 182px;
+    }
+}
