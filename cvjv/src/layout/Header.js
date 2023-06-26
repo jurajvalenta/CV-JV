@@ -1,6 +1,7 @@
 import jv from "../img/jv.png";
 import "./header.css";
 import "../components/PrintButton.css"
+import { contact } from "../data";
 import { ImLocation } from 'react-icons/im';
 import { useTranslation } from 'react-i18next';
 
@@ -12,32 +13,35 @@ const Header = () => {
   return (
     <>
       <div className="header">
-
+       
         <div className="title-name">
           <img src={jv} alt="jv" className="photo" />
-          <h1> Juraj VALENTA</h1>
+         {contact.map((titleName) => <h1>{titleName.name}</h1> )} 
         </div>
       </div>
 
       <div className="contact">
-        <div className="contact-center">
-
+        
+        {contact.map((oneElement) => (
+          <div className="contact-center">
           <div className="contact-block">
             <p>{t("Tel. contact")}:</p>
-            <a href="callto:+421 915 129 626">+421 915 129 626</a>
+            <a href={`callto:${oneElement.phone}`}>{oneElement.phone}</a>
           </div>
 
           <div className="contact-block">
             <p>E-mail:</p>
-            <a href="mailto:jurajvalenta@gmail.com">jurajvalenta@gmail.com</a>
+            <a href={`mailto:${oneElement.email}`}>{oneElement.email}</a>
           </div>
 
           <div className="contact-block">
             <p>{t("Residence")}:</p>
-            <a href="https://goo.gl/maps/3UXnT7UuuUjBeYpK8"><ImLocation />Banská Bystrica, Slovakia </a>
+            <a href={`${oneElement.location}`}><ImLocation />{oneElement.residence}</a>
           </div>
         </div>
+        ))}
       </div>
+      
     </>
   )
 }

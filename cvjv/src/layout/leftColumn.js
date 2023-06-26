@@ -1,7 +1,7 @@
 
 import "../components/PrintButton.css"
-
 import '../components/SkillBar.css';
+import { languageSkills, extraSkills } from "../data";
 import { useTranslation } from 'react-i18next';
 
 import PrintButton from "../components/PrintButton";
@@ -20,48 +20,39 @@ const LeftColumn = ({ handlePrint }) => {
         <hr />
         <b>{t("Language skills")}</b>
         <hr />
-        <div className="skill-box">
-          <span className="title">{t("Slovak")}</span>
-          <div className="skill-bar">
-            <span className="skill-per hundret">
-              <span className="tooltip">100%</span>
-            </span>
+        {languageSkills.map((oneLanguage) => (
+          <div className="skill-box">
+            <div key={oneLanguage.id}>
+              <span className="title">{t(oneLanguage.language)}</span>
+              <div className="skill-bar">
+                <span className={`skill-per ${oneLanguage.class}`}>
+                  <span className="tooltip">{oneLanguage.level}%</span>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">{t("English")}</span>
-          <div className="skill-bar">
-            <span className="skill-per seventy">
-              <span className="tooltip">70%</span>
-            </span>
-          </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">{t("German")}</span>
-          <div className="skill-bar">
-            <span className="skill-per twentyfive">
-              <span className="tooltip">25%</span>
-            </span>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="container">
         <hr />
-        <b>{t("Driving license")}</b>
+        {extraSkills.map((oneExtraSkill) => (
+          <b key={oneExtraSkill.id}>{t(oneExtraSkill.title)}</b>
+        ))}
         <hr />
         <div className="skill-box">
-          <span className="title">{t("B, B1")}</span>
+          {extraSkills.map((oneExtraSkill) => <span className="title" key={oneExtraSkill.id}>{t(oneExtraSkill.drivingLicense)}</span>
+          )}
         </div>
       </div>
 
       <div className="buttons">
         <PrintButton handlePrint={handlePrint} />
-            {Object.keys(lngs).map((lng) => (
-            <button className="btn" key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-              {lngs[lng].nativeName}
-            </button>
-          ))}
+        {Object.keys(lngs).map((lng) => (
+          <button className="btn" key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            {lngs[lng].nativeName}
+          </button>
+        ))}
       </div>
     </div>
   );

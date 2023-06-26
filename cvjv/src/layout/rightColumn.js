@@ -1,6 +1,7 @@
 import '../components/SkillBar.css';
 import { TbCertificate } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
+import { skills, certificates } from "../data";
 
 
 const RightColumn = () => {
@@ -9,90 +10,32 @@ const RightColumn = () => {
   return (
     <div className="right" >
       <div className="container">
-      <hr />
-      <b>{t("SKILLS")}</b>
-      <hr />
-        <div className="skill-box">
-          <span className="title">Photoshop</span>
-          <div className="skill-bar">
-            <span className="skill-per eighty">
-              <span className="tooltip">80%</span>
-            </span>
+        <hr />
+        <b>{t("SKILLS")}</b>
+        <hr />
+        {skills.map((oneSkill) => (
+          <div className="skill-box">
+            <div key={oneSkill.id}>
+              <span className="title">{t(oneSkill.name)}</span>
+              <div className="skill-bar">
+                <span className={`skill-per ${oneSkill.class}`}>
+                  <span className="tooltip">{oneSkill.level}%</span>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">Illustrator</span>
-          <div className="skill-bar">
-            <span className="skill-per eighty">
-              <span className="tooltip">80%</span>
-            </span>
-          </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">JavaScript</span>
-          <div className="skill-bar">
-            <span className="skill-per fifty">
-              <span className="tooltip">50%</span>
-            </span>
-          </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">ReactJS</span>
-          <div className="skill-bar">
-            <span className="skill-per fifty">
-              <span className="tooltip">50%</span>
-            </span>
-          </div>
-        </div>
-      <div className="skill-box">
-          <span className="title">HTML</span>
-          <div className="skill-bar">
-            <span className="skill-per sixty">
-              <span className="tooltip">60%</span>
-            </span>
-          </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">CSS</span>
-          <div className="skill-bar">
-            <span className="skill-per fifty">
-              <span className="tooltip">50%</span>
-            </span>
-          </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">SQL</span>
-          <div className="skill-bar">
-            <span className="skill-per fourty">
-              <span className="tooltip">40%</span>
-            </span>
-          </div>
-        </div>
-      <div className="skill-box">
-          <span className="title">Prestashop</span>
-          <div className="skill-bar">
-            <span className="skill-per eighty">
-              <span className="tooltip">80%</span>
-            </span>
-          </div>
-        </div>
-        <div className="skill-box">
-          <span className="title">Wordpress</span>
-          <div className="skill-bar">
-            <span className="skill-per seventy">
-              <span className="tooltip">70%</span>
-            </span>
-          </div>
-        </div>
-      <hr />
+        ))}
+        <hr />
       </div>
       <div className="container">
         <b>{t("CERTIFICATES")}</b>
         <hr />
-          <p><TbCertificate/> CCNA EXPLORATION</p>
-          <span className="certificate-title"> Network Fundamentals</span>
-          <p><TbCertificate/> CCNA EXPLORATION</p>
-          <span className="certificate-title"> Routing Protocols and Concepts</span>
+        {certificates.map((oneCertificate) => (
+          <div>
+            <p><TbCertificate /> {oneCertificate.name}</p>
+            <span className="certificate-title">{oneCertificate.subject}</span>
+          </div>
+        ))}
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import infoBlocks from "../data";
+import { infoBlocks } from "../data";
 import InfoBlock from "../components/infoBlock";
 import "./centerColumn.css"
 import { useTranslation } from 'react-i18next';
