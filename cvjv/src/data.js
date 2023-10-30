@@ -1,3 +1,8 @@
+// Return today's date and time
+const currentTime = new Date()
+
+// returns the year (four digits)
+const actualYear = currentTime.getFullYear()
 
 export const infoBlocks = [
     {
@@ -36,11 +41,22 @@ export const infoBlocks = [
         subject: "Teaching of Physical Education and Teaching of Information Technology",
         place: "Základná škola Hrnčiarska",
         adress:"Zvolen, Hrnčiarska 1",
-        years: "2020-2023"
+        years: "2020-" + actualYear
+
+    },
+    
+    {
+        id: 5,
+        type: "job",  
+        title: "Freelancer",
+        subject: "Web design, implementation of templates, technical management of e-shops and websites",
+        place: "Side Job",
+        adress:"Home office",
+        years: "2015-2022"
 
     },
     {
-        id: 5,
+        id: 6,
         type: "job",  
         title: "Self-employed person",
         subject: "Assistant coach of the Slovak national team and head of the service team",
@@ -50,7 +66,7 @@ export const infoBlocks = [
 
     },
     {
-        id: 6,
+        id: 7,
         type: "job",  
         title: "Staffline",
         subject: "Warehouse Picker",
@@ -61,7 +77,7 @@ export const infoBlocks = [
     },
 
     {
-        id: 7,
+        id: 8,
         type: "job",  
         title: "WaT - Illinois, USA",
         subject: "Houskeeping, Set-up",
@@ -120,57 +136,70 @@ export const extraSkills = [
 export const skills = [
     {
         id: 1,
-        name: "Photoshop",
+        name: "ReactJS",
         level: "80%",
         class: "eighty"
     },
     {
         id: 2,
-        name: "Illustrator",
-        level: "80%",
-        class: "eighty"
+        name: "JavaScript",
+        level: "70%",
+        class: "seventy"
     },
     {
         id: 3,
-        name: "JavaScript",
-        level: "50%",
-        class: "fifty"
-    },
-    {
-        id: 4,
-        name: "ReactJS",
-        level: "50%",
-        class: "fifty"
-    },
-    {
-        id: 5,
-        name: "HTML",
+        name: "TypeScript",
         level: "60%",
         class: "sixty"
     },
     {
-        id: 6,
-        name: "CSS",
-        level: "50%",
-        class: "fifty"
+        id: 4,
+        name: "PHP",
+        level: "70%",
+        class: "seventy"
     },
+
     {
-        id: 7,
-        name: "SQL",
-        level: "40%",
-        class: "fourty"
-    },
-    {
-        id: 8,
-        name: "Prestashop",
+        id: 5,
+        name: "HTML",
         level: "80%",
         class: "eighty"
     },
     {
-        id: 9,
-        name: "Wordpress",
+        id: 6,
+        name: "CSS",
         level: "70%",
         class: "seventy"
+    },
+    {
+        id: 7,
+        name: "SQL",
+        level: "70%",
+        class: "seventy"
+    },
+    {
+        id: 8,
+        name: "Prestashop",
+        level: "90%",
+        class: "ninety"
+    },
+    {
+        id: 9,
+        name: "Wordpress",
+        level: "80%",
+        class: "eighty"
+    },
+    {
+        id: 10,
+        name: "Photoshop",
+        level: "80%",
+        class: "eighty"
+    },
+    {
+        id: 11,
+        name: "Illustrator",
+        level: "80%",
+        class: "eighty"
     },
 ];
 
