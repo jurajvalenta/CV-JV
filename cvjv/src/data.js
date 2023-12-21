@@ -49,7 +49,7 @@ export const infoBlocks = [
         id: 5,
         type: "job",  
         title: "Freelancer",
-        subject: "Web design, implementation of templates, technical management of e-shops and websites",
+        subject: "Web design, templates, technical management of e-shops and websites",
         place: "Side Job",
         adress:"Home office",
         years: "2015-2022"

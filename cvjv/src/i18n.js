@@ -77,7 +77,7 @@ i18n
             "University of Matej Bel - faculty of phylosophy" : "Univerzita Mateja bela - filozofická fakulta",
             "Side Job" : "Vedľajšia práca",
             "Home office" : "Práca z domu",
-            "Web design, implementation of templates, technical management of e-shops and websites" : "Webdizajn, implementácia šablón, technická správa e-shopov a web stránok",
+            "Web design, templates, technical management of e-shops and websites" : "Webdizajn, implementácia šablón, technická správa e-shopov a web stránok",
             "Mechanic of computer networks" : "Mechanik počítačových sietí",
             "Show more" : "Zobraziť viac",
             "Show less" : "Skryť",
